@@ -28,10 +28,13 @@ import sys
 import os
 
 def main():
-    print 'Bimbam tool by Mathias Kaerlev'
-    print 'Modded by FNAFSource'
-    print ''
-
+    print('#' * 43)
+    print('# ======== FN@FSource Decompiler ======== #')
+    print('# '    + '-' * 39 +   ' #')
+    print('# Original bimbam tool by Mathias Kaerlev #')
+    print('#' * 43)
+    print('\n\n')
+    
     input = sys.argv[1]
     output = sys.argv[2]
 
@@ -43,7 +46,7 @@ def main():
 
         for file in newExe.packData.items:
             name = file.filename.split('\\')[-1]
-            print 'Writing pack file %r' % name
+            print('Writing pack file ' + name)
             open(os.path.join(output, name), 'wb').write(file.data)
 
         newGame = newExe.gameData
@@ -51,19 +54,19 @@ def main():
     if newGame.files is not None:
         for file in newGame.files.items:
             name = file.name.split('\\')[-1]
-            print 'Writing embedded file %r' % name
+            print('Writing embedded file ' + name)
             open(os.path.join(output, name), 'wb').write(str(file.data))
     newGame.files = None
 
     def out(value):
-        print value
+        print(value)
 
     newMfa = translate(newGame, print_func = out)
     out_path = os.path.join(output, 'out.mfa')
     newMfa.write(ByteReader(open(out_path, 'wb')))
 
     # newMfa = MFA(ByteReader(open(out_path, 'rb')))
-    print 'Decompiling Complete!'
+    print('Decompilation Completed!')
 
 if __name__ == '__main__':
     main()
