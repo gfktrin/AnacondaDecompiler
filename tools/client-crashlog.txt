@@ -1,0 +1,28 @@
+15.03.2017 16:13:25
+System.TypeInitializationException: Инициализатор типа "Terraria.Lang" выдал исключение. ---> System.IO.DirectoryNotFoundException: Не удалось найти часть пути "C:\anaconda-mode3\tools\Content\Languages".
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   в System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   в System.IO.Directory.GetFiles(String path)
+   в Terraria.Lang..cctor()
+   --- Конец трассировки внутреннего стека исключений ---
+   в Terraria.Lang.lng(String type, Int32 l, Boolean english)
+   в Terraria.GameInput.PlayerInput.Initialize()
+   в Terraria.Main.Initialize()
+   в Microsoft.Xna.Framework.Game.RunGame(Boolean useBlockingRun)
+   в Terraria.Program.LaunchGame(String[] args)
+
+15.03.2017 16:13:28
+System.TypeInitializationException: Инициализатор типа "Terraria.Lang" выдал исключение. ---> System.IO.DirectoryNotFoundException: Не удалось найти часть пути "C:\anaconda-mode3\tools\Content\Languages".
+   в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   в System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   в System.IO.Directory.GetFiles(String path)
+   в Terraria.Lang..cctor()
+   --- Конец трассировки внутреннего стека исключений ---
+   в Terraria.Lang.lng(String type, Int32 l, Boolean english)
+   в Terraria.GameInput.PlayerInput.Initialize()
+   в Terraria.Main.Initialize()
+   в Microsoft.Xna.Framework.Game.RunGame(Boolean useBlockingRun)
+   в Terraria.Program.LaunchGame(String[] args)
+
