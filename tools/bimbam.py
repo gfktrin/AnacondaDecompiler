@@ -29,7 +29,7 @@ import os
 
 def main():
     print 'Bimbam tool by Mathias Kaerlev'
-    print 'ONLY for use on your own applications.'
+    print 'Modded by FNAFSource'
     print ''
 
     input = sys.argv[1]
@@ -63,7 +63,7 @@ def main():
     newMfa.write(ByteReader(open(out_path, 'wb')))
 
     # newMfa = MFA(ByteReader(open(out_path, 'rb')))
-    print 'Finished!'
+    print 'Decompiling Complete!'
 
 if __name__ == '__main__':
     main()
