@@ -17,7 +17,6 @@
 
 cdef class DataLoader:
     def __init__(self, reader = None, parent = None, **settings):
-    mmfparser.loader.DataLoader.__init__(./mmfparser/loader.cpp:1010
         self.init(reader, parent, settings)
 
     cdef bint init(self, ByteReader reader, DataLoader parent,

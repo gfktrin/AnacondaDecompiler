@@ -26,7 +26,6 @@ products = {
     'MMF1' : 0x0300,
     'MMF1.5' : 0x0301,
     'MMF2' : 0x0302
-
 }
 
 class GameData(DataLoader):
@@ -316,7 +315,7 @@ class GameData(DataLoader):
             newChunks.append(frame, False)
         newChunks.append(Protection())
         newChunks.append(self.images)
-        newChunks.append(self.imageOffsets)
+        #newChunks.append(self.imageOffsets)
         newChunks.append(self.new(ImageOffsets, bank = self.images))
         if self.fonts is not None:
             newChunks.append(self.fonts)
