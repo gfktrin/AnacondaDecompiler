@@ -25,7 +25,7 @@ from Cython.Distutils.extension import Extension
 from Cython.Build import cythonize
 
 from Cython.Compiler import Options
-directive_defaults = Options.directive_defaults
+directive_defaults = Cython.Compiler.Options.get_directive_defaults()
 Options.docstrings = False
 if sys.argv[0].count('profile'):
     directive_defaults['profile'] = True
